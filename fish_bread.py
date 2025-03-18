@@ -71,7 +71,7 @@ while True:
         order_bread()
 
     elif mode == "관리자":
-        admin_bread()
+        admin_mode()
 
     elif mode == "데이터 분석":
         pass
