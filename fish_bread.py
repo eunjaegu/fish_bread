@@ -53,6 +53,14 @@ def admin_mode():
         else :
             print("재고를 추가할 올바른 메뉴를 입력하세요.")
 
+def calculate_salse():
+    total_sales = 0
+
+    for bread in sales:
+        total_sales += (sales[bread] * prices[bread])
+    print(f"총 매출은 {total_sales}원입니다.")
+
+
 # 메인 기능 선택
 while True:
     mode = input("원하는 모드를 선택하세요 (주문, 관리자, 종료) : ")
@@ -63,8 +71,14 @@ while True:
         order_bread()
 
     elif mode == "관리자":
-        admin_mode()
+        admin_bread()
 
     elif mode == "데이터 분석":
         pass
+
+calculate_salse()
+
+
+
+
 
